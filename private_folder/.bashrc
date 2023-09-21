@@ -8,12 +8,16 @@ case $- in
       *) return;;
 esac
 
-cat wizard.png | lolcat
+python3 ascii_duplication_glitch.py lolcat
 ls | lolcat
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
+
+function cs() {
+	cd "$@" && ls
+}
 
 # append to the history file, don't overwrite it
 shopt -s histappend
@@ -120,3 +124,19 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/simon515lavoie/conda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/simon515lavoie/conda/etc/profile.d/conda.sh" ]; then
+        . "/home/simon515lavoie/conda/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/simon515lavoie/conda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

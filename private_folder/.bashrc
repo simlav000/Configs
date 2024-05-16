@@ -8,28 +8,16 @@ case $- in
       *) return;;
 esac
 
-export EDITOR=vim
-
-CC() {
-    "$@" | xclip -selection clipboard
-}
-
-wizard() {
-	cat ~/images/wallpaper/wizards.png | lolcat && ls | lolcat
-}
-
-cs() {
-	cd "$@" && ls
-}
-
-wizard
+python3 ascii_duplication_glitch.py lolcat
+ls | lolcat
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
 
-alias dp="ls -lFa \!* |& fgrep ' .' | egrep -v '\.\/' | more"
-
+function cs() {
+	cd "$@" && ls
+}
 
 # append to the history file, don't overwrite it
 shopt -s histappend
@@ -125,9 +113,6 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 alias login='ssh -Y exosim'
-alias choco='ssh choco.physics.mcgill.ca'
-alias lxplus='ssh -Y -l slavoie lxplus.cern.ch'
-alias lxplus7='ssh -Y -l slavoie lxplus7.cern.ch'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -155,5 +140,3 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash

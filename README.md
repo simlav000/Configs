@@ -1,2 +1,2 @@
-# first_repo
+# Config
 basic stuff and customization

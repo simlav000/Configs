@@ -15,7 +15,7 @@ CC() {
 }
 
 wizard() {
-	cat ~/images/wallpaper/wizards.png | lolcat && ls | lolcat
+	cat ~/images/wallpaper/wizards.png | lolcat && ls 
 }
 
 cs() {

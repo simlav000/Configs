@@ -15,7 +15,7 @@ CC() {
 }
 
 wizard() {
-    python ~/python/ascii_duplication_glitch.py ~/images/wallpaper/wizard.png 3 | lolcat && ls 
+    python3 ~/python/ascii_duplication_glitch.py ~/images/wallpaper/wizard.png 3 | lolcat && ls 
 }
 
 cs() {

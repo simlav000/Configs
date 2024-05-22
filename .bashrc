@@ -15,7 +15,7 @@ CC() {
 }
 
 wizard() {
-    python ~/python/ascii_duplication_glitch.py ~/images/wallpaper/wizard.png 3 | lolcat && ls 
+    python3 ~/python/ascii_duplication_glitch.py ~/images/wallpaper/wizard.png 3 | lolcat && ls 
 }
 
 cs() {
@@ -124,7 +124,7 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-alias login='ssh -Y exosim'
+alias exosim='ssh -Y exosim'
 alias choco='ssh choco.physics.mcgill.ca'
 alias lxplus='ssh -Y -l slavoie lxplus.cern.ch'
 alias lxplus7='ssh -Y -l slavoie lxplus7.cern.ch'

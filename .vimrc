@@ -12,12 +12,14 @@ inoremap jk <Esc>
 " Normal mode bindings
 nnoremap sn :set invnumber<CR>
 nnoremap sp :set invpaste<CR>
+nnoremap <C-b> :NERDTreeToggle<CR>
 
 " Visual mode bindings
 vnoremap <C-c> :w !xclip -i -sel c<CR><CR>
 
 " vim-plug section:
 call plug#begin()
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'junegunn/vim-easy-align'
 Plug 'https://github.com/junegunn/seoul256.vim.git'

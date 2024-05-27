@@ -12,6 +12,7 @@ inoremap jk <Esc>
 " Normal mode bindings
 nnoremap sn :set invnumber<CR>
 nnoremap sp :set invpaste<CR>
+nnoremap sf :set invfoldenable<CR>
 nnoremap <C-b> :NERDTreeToggle<CR>
 
 " Visual mode bindings

@@ -1,0 +1,10 @@
+# Ignore everything
+*
+
+# Whitelist specific files
+!.gitignore
+!.bash_aliases
+!.vimrc
+!python/ascii_duplication_glitch.py
+!README.md
+

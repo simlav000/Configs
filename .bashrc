@@ -8,22 +8,6 @@ case $- in
       *) return;;
 esac
 
-export EDITOR=vim
-
-CC() {
-    "$@" | xclip -selection clipboard
-}
-
-wizard() {
-    python3 ~/python/ascii_duplication_glitch.py ~/images/wallpaper/wizard.png 3 | lolcat && ls 
-}
-
-cs() {
-	cd "$@" && ls
-}
-
-wizard
-
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -123,11 +107,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-
-alias exosim='ssh -Y exosim'
-alias choco='ssh choco.physics.mcgill.ca'
-alias lxplus='ssh -Y -l slavoie lxplus.cern.ch'
-alias lxplus7='ssh -Y -l slavoie lxplus7.cern.ch'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile

@@ -5,6 +5,21 @@ set shiftwidth=4
 set expandtab
 set term=xterm-256color
 set laststatus=2
+set nocompatible
+
+syntax enable
+filetype plugin on
+
+" FINDING FILES
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+" Would be nice if there was a way to exclude certain folders from being added
+" to the path
+set path+=**
+
+" The following allows us to write :find and press tab
+" to browse partial matches, e.g. :find *.cpp 
+set wildmenu
 
 " Insert mode bindings
 inoremap jk <Esc>
@@ -36,6 +51,7 @@ endfunction
 
 " vim-plug section:
 call plug#begin()
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'junegunn/vim-easy-align'
 Plug 'https://github.com/junegunn/seoul256.vim.git'
@@ -54,3 +70,5 @@ call plug#end()
 colorscheme moonfly
 highlight Normal ctermbg=black guibg=black
 
+let g:mkdp_auto_start = 1
+let g:mkdp_auto_close = 1

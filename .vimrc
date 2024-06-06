@@ -51,6 +51,7 @@ endfunction
 
 " vim-plug section:
 call plug#begin()
+Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'junegunn/vim-easy-align'

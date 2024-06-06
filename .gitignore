@@ -5,6 +5,7 @@
 !.gitignore
 !.bash_aliases
 !.vimrc
+!.config/nvim/
 !python/ascii_duplication_glitch.py
 !README.md
 

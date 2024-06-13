@@ -1,6 +1,7 @@
 require("simlav000.set")
 require("simlav000.remap")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 -- Create a namespace for the extmarks
 local ns_id = vim.api.nvim_create_namespace("multiple_cursors")
@@ -28,5 +29,7 @@ end
 
 -- Keybinding to trigger the function in visual mode
 vim.api.nvim_set_keymap("x", "I", ":lua place_cursors_visual_block()<CR>", { noremap = true, silent = true })
+=======
+>>>>>>> 3f358a1 (kickstart merge pc laptop)
 =======
 >>>>>>> 3f358a1 (kickstart merge pc laptop)

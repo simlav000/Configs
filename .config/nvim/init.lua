@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 require("simlav000")
 --[[
 
@@ -926,6 +925,8 @@ require("lazy").setup({
 -- vim: ts=2 sts=2 sw=2 et
 vim.api.nvim_set_keymap("i", "jk", "<Esc>", { noremap = true, silent = true })
 =======
+=======
+>>>>>>> 3f358a1 (kickstart merge pc laptop)
 require("simlav000")
 --[[
 
@@ -1849,4 +1850,7 @@ require("lazy").setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+<<<<<<< HEAD
+>>>>>>> 3f358a1 (kickstart merge pc laptop)
+=======
 >>>>>>> 3f358a1 (kickstart merge pc laptop)

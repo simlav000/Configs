@@ -33,22 +33,6 @@ nnoremap <C-b> :NERDTreeToggle<CR>
 " Visual mode bindings
 vnoremap <C-c> :w !xclip -i -sel c<CR><CR>
 
-" Set fold method to marker and define fold markers
-set foldmethod=marker
-set foldmarker=/*,*/
-
-" Toggle fold with sf
-nmap sf :call ToggleFold()<CR>
-
-" Function to toggle fold
-function! ToggleFold()
-  if foldclosed(line('.')) == -1
-    normal! zc
-  else
-    normal! zo
-  endif
-endfunction
-
 " vim-plug section:
 call plug#begin()
 Plug 'Exafunction/codeium.vim', { 'branch': 'main' }

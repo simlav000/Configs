@@ -59,23 +59,16 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagn
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
--- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
--- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
--- is not what someone will guess without a bit more experience.
---
--- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
--- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
 -- TIP: Disable arrow keys in normal mode
--- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
--- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
--- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
--- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
+vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
+vim.keymap.set("n", "<right>", '<cmd>echo "Use l to move!!"<CR>')
+vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')
+vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
---
 --  See `:help wincmd` for a list of all window commands
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
@@ -115,20 +108,10 @@ vim.opt.rtp:prepend(lazypath)
 --  To update plugins you can run
 --    :Lazy update
 --
--- NOTE: Here is where you install your plugins.
 require("lazy").setup({
-	-- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
+
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 	"ThePrimeagen/vim-be-good",
-
-	-- NOTE: Plugins can also be added by using a table,
-	-- with the first argument being the link and the following
-	-- keys can be used to configure plugin behavior/loading/etc.
-	--
-	-- Use `opts = {}` to force a plugin to be loaded.
-	--
-	--  This is equivalent to:
-	--    require('Comment').setup({})
 
 	-- "gc" to comment visual regions/lines
 	{ "numToStr/Comment.nvim", opts = {} },
@@ -459,7 +442,17 @@ require("lazy").setup({
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
 				clangd = {},
-
+				-- gopls = {},
+				-- pyright = {},
+				-- rust_analyzer = {},
+				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
+				--
+				-- Some languages (like typescript) have entire language plugins that can be useful:
+				--    https://github.com/pmizio/typescript-tools.nvim
+				--
+				-- But for many setups, the LSP (`tsserver`) will work just fine
+				-- tsserver = {},
+				--
 				lua_ls = {
 					-- cmd = {...},
 					-- filetypes = { ...},

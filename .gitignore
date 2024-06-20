@@ -1,3 +1,5 @@
+# Specific pesky files
+/home/simlav000/.config/nvim/lazy-lock.json
 # Ignore everything
 *
 
@@ -9,15 +11,9 @@
 !README.md
 
 # Whitelist specific directories
-!.config/
-!.config/nvim/
 !.config/nvim/*.lua
 !.config/nvim/*.vim
-!.config/nvim/after/
-!.config/nvim/after/plugin/
 !.config/nvim/after/plugin/*.lua
 !.config/nvim/after/plugin/*.vim
-!.config/nvim/lua/
-!.config/nvim/lua/simlav000/
 !.config/nvim/lua/simlav000/*.lua
 !.config/nvim/lua/simlav000/*.vim

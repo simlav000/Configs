@@ -4,9 +4,9 @@ alias editnvim="nvim ~/.config/nvim/init.lua"
 alias editbash="nvim ~/.bashrc"
 alias editalias="nvim ~/.config/.bash_aliases"
 
-alias ls="exa --long --icons --color=always --no-permissions --no-filesize --no-user --no-time"
-alias ll="exa --long --icons --color=always"
-alias la='exa --long --icons --color=always -a'
+alias ls="eza --long --icons --color=always --no-permissions --no-filesize --no-user --no-time"
+alias ll="eza --long --icons --color=always"
+alias la='eza --long --icons --color=always -a'
 
 alias cat="batcat"
 

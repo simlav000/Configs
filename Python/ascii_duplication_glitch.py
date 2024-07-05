@@ -23,5 +23,5 @@ def main():
         for line in array:
             print(line)
 
-if __name__ == "__main__":
+if __name__ == fr"__main__":
     main()
